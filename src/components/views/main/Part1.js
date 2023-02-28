@@ -4,7 +4,7 @@ export function Part1() {
 
   return (
     <section id="Part1">
-      <div> 1 </div>
+      <div> SKUCOIN </div>
     </section>
   )
 }

@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useEffect, useState } from 'react';
 import Part1 from './Part1';
 import Part2 from './Part2';
 import Part3 from './Part3';
@@ -7,6 +7,7 @@ import Part4 from './Part4';
 function Main() {
 
   const [screenHeights, setScreenHeights] = useState([]);
+  const [isReady, setIsReady] = useState(false);
 
   // DOM 이전에 실행하여 clientHeight 를 먼저 잡기 위해 useLayoutEffect 사용
   useLayoutEffect(() => {
@@ -22,13 +23,24 @@ function Main() {
         part3.clientHeight,
         part4.clientHeight,
       ]);
-      // console.log('checked');
     }
+
   }, []);
 
   // FullPage Wheel 함수
   const wheelHandle = (e) => {
     e.preventDefault(); // 브라우저의 wheel event 를 막음
+
+    if (!isReady) {
+      setIsReady(true);
+
+      setTimeout(() => {
+        setIsReady(false);
+      }, 600);
+    } else {
+      return; // 한페이지가 다 내려가기전에 또다른 wheel 이벤트가 발생되는것을 방지
+    }
+
     const currentScreenIndex = Math.round(window.scrollY / window.innerHeight);
     const deltaY = e.deltaY;
     const nextScreenIndex = currentScreenIndex + Math.sign(deltaY);
@@ -42,12 +54,12 @@ function Main() {
   };
 
   // passive: false 를 주어 강제적으로 wheel 이벤트를 막음
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener('wheel', wheelHandle, { passive: false });
     return () => {
       window.removeEventListener('wheel', wheelHandle, { passive: false });
     };
-  }, [screenHeights]);
+  }, [isReady]);
 
   return (
     <div className="Index">
