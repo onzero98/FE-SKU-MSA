@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export function Part2() {
+function Part2() {
 
   return (
     <section id="Part2">
