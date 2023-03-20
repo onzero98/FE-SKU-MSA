@@ -1,13 +1,16 @@
 body {
-	font-family: 'rkorea';
-	font-weight: 200;
-	font-size: 50px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.title {
+	font-family: 'rkorea';
+	font-weight: 400;
+	font-size: 48px;
 }
 
 #Part1 {
@@ -19,6 +22,22 @@ body {
 	align-items: center;
 	justify-content: center;
 	touch-action: none;
+
+	.scroll-ui-wrap {
+		position: absolute;
+		bottom: 8.88vh;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		z-index: 5;
+
+		.txt {
+			font-family: pretendard;
+			font-weight: 200;
+			font-size: 25px;
+			display: inline-block;
+		}
+	}
 }
 
 #Part2 {
