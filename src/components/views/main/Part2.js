@@ -4,7 +4,7 @@ function Part2() {
 
   return (
     <section id="Part2">
-      <div> 2 </div>
+      <div className='title' style={{color:'white'}}> 서브페이지 </div>
     </section>
   )
 }
