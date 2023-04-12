@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f6f6f6;
+  }
+  
+  h2 {
+    margin-bottom: 50px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+ /* ... 기존 코드 ... */
+
+.input,
+.loginButton,
+.signupButton {
+  box-sizing: border-box; /* 추가 */
+  width: 400px; /* max-width를 width로 변경 */
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.input {
+  border: 1px solid #ddd;
+  outline: none;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #333;
+}
+
+.loginButton {
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+.signupButton {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  margin-bottom: 250px;
+}
+
+.Toastify__toast {
+  width: 600px;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 16px 28px;
+  color: #fff;
+}

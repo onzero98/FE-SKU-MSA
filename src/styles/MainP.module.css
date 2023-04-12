@@ -1,4 +1,6 @@
 body {
+	font-weight: 200;
+	font-size: 50px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -7,13 +9,7 @@ body {
   display: none;
 }
 
-.title {
-	font-family: 'rkorea';
-	font-weight: 400;
-	font-size: 48px;
-}
-
-#Part1 {
+.Part1 {
   display: flex;
 	position: relative;
 	width: 100%;
@@ -21,26 +17,10 @@ body {
 	background: white;
 	align-items: center;
 	justify-content: center;
-	touch-action: none;
-
-	.scroll-ui-wrap {
-		position: absolute;
-		bottom: 8.88vh;
-		left: 0;
-		width: 100%;
-		text-align: center;
-		z-index: 5;
-
-		.txt {
-			font-family: pretendard;
-			font-weight: 200;
-			font-size: 25px;
-			display: inline-block;
-		}
-	}
+    touch-action: none;
 }
 
-#Part2 {
+.Part2 {
   display: flex;
 	position: relative;
 	width: 100%;
@@ -51,7 +31,7 @@ body {
 	touch-action: none;
 }
 
-#Part3 {
+.Part3 {
   display: flex;
 	position: relative;
 	width: 100%;
@@ -62,7 +42,7 @@ body {
 	touch-action: none;
 }
 
-#Part4 {
+.Part4 {
   display: flex;
 	position: relative;
 	width: 100%;
@@ -83,16 +63,5 @@ body {
 	flex-direction: column;
 	justify-content: space-around;
 	z-index: 2;
-	button {
-		width: 15px;
-		height: 15px;
-		border-radius: 100px;
-		border: none;
-		background: #3e5f71;
-		transition: all 0.3s;
-		cursor: pointer;
-		&.on {
-			height: 35px;
-		}
-	}
 }
+

@@ -1,8 +1,10 @@
 import { useLayoutEffect, useEffect, useState } from 'react';
+import Header from '../../components/Header';
 import Part1 from './Part1';
 import Part2 from './Part2';
 import Part3 from './Part3';
 import Part4 from './Part4';
+import styles from '../../styles/MainP.module.css';
 
 function Main() {
 
@@ -63,10 +65,11 @@ function Main() {
 
   return (
     <div className="Index">
-      <Part1 />
-      <Part2 />
-      <Part3 />
-      <Part4 />
+      <Header />
+      <Part1 styles={styles}/>
+      <Part2 styles={styles}/>
+      <Part3 styles={styles}/>
+      <Part4 styles={styles}/>
     </div>
   );
 }

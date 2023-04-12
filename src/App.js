@@ -1,15 +1,16 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Main from './components/views/main/IndexMain';
-import Header from './components/outline/Header';
-import './scss/style.scss';
+import Main from './pages/main/Main';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
       <Router>
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </Router>
     </div>
