@@ -1,0 +1,120 @@
+* {
+  font-family: Pretendard;
+}
+
+.tradeContainer {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr;
+  grid-template-areas: 
+    "buttons panel"
+    "buttons panel";
+  height: 100%;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+.tradeButton {
+  max-width: 100px;
+  grid-area: buttons;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  border: none;
+}
+
+.tradeButton button {
+  flex-grow: 1;
+  border: none;
+  background-color: #eff2f5;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tradeButton button:hover:not(.activeBuy):not(.activeSell) {
+  background-color: #efefef;
+}
+
+
+.tradeButton button span {
+  display: block;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.tradeButton .activeBuy {
+  background-color: #e12343;
+  color: white;
+}
+
+.tradeButton .activeSell {
+  background-color: #1763b6;
+  color: white;
+}
+
+.tradePanel {
+  grid-area: panel;
+  /* max-height: 450px; */
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.tradePanel p {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
+.tradePanel input {
+  text-align: right;
+  box-sizing: border-box;
+  border: 1px solid #9e9e9e;
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+
+}
+
+.between {
+  width: 100%;
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.between span {
+  color: #9e9e9e;
+}
+
+.submit {
+  border: 0;
+  border-radius: 6px;
+  outline: 0;
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.activeBuy {
+  background-color: #e12343;
+  color: white;
+}
+
+.activeSell {
+  background-color: #1763b6;
+  color: white;
+}

@@ -1,0 +1,121 @@
+  .tableWrapper {
+    overflow-x: auto;
+    max-width: 100%;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  .SearchTable {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .SearchTable th {
+    padding: 0.5rem;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eff2f5;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .SearchTable td {
+    padding: 0.5rem;
+    height: 40px;
+    border: none;
+    text-align: right;
+    cursor: pointer;
+  }
+
+  .active {
+    /* box-shadow: 0 0 0 3px #1772f8; */
+    background-color: #eff2f5
+  }
+
+  .SearchTable th:first-child,
+  .SearchTable td:first-child {
+    font-size: 16px;
+    text-align: left;
+    min-width: 130px;
+  }
+
+  .SearchTable th:nth-child(2),
+  .SearchTable td:nth-child(2) {
+    min-width: 80px;
+  }
+
+  .SearchTable th:nth-child(3),
+  .SearchTable td:nth-child(3) {
+    text-align: center;
+    min-width: 80px;
+  }
+
+  .SearchTable th:nth-child(4),
+  .SearchTable td:nth-child(4) {
+    min-width: 60px;
+  }
+
+  .red {
+    color: red;
+  }
+
+  .blue {
+    color: blue;
+  }
+
+  .searchSection {
+    min-width: 420px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #eff2f5;
+  }
+
+  .searchInput {
+    border: none;
+    border-radius: 6px;
+    padding: 0 10px;
+    margin: 5px 0;
+    height: 50px;
+    width: 100%;
+    border: 1px solid transparent;
+  }
+
+  .searchInput:focus {
+    outline: none;
+    border: 1px solid #1772f8;
+  }
+
+  .searchIcon {
+    color: #424242;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+  }
+
+  .ArrowIcons {
+    color: #424242;
+  }
+
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .blink {
+    animation: blink 1s linear infinite;
+  }
+  

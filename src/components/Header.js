@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { showToast } from './Modal';
+import { UserCheck } from './UserCheck';
 import styles from '../styles/Header.module.css';
 
 function Header() {
-
   const [isLoggedin, setIsLoggedin] = useState(!!sessionStorage.getItem("jwt-token"));
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     sessionStorage.removeItem("jwt-token");
     setIsLoggedin(false);
+    navigate("/");
   };
 
   const handleClick = (event) => {
@@ -34,14 +36,17 @@ function Header() {
           <Link to="/trade" className={styles.navLink} onClick={handleClick}>
             Trade
           </Link>
-          <Link to="/wallet" className={styles.navLink} onClick={handleClick}>
+          {/* <Link to="/wallet" className={styles.navLink} onClick={handleClick}>
             Wallet
-          </Link>
+          </Link> */}
         </nav>
       </div>
       <div className={styles.rightMenu}>
       { isLoggedin ? (
+        <>
+          <p>{UserCheck()} 님</p>
           <a href='#' className={`${styles.loginButton} ${styles.navLink}`} onClick={handleLogout}>로그아웃</a>
+        </>
       ):(
         <>
           <Link to="/login" className={`${styles.loginButton} ${styles.navLink}`}>

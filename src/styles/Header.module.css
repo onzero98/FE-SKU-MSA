@@ -2,7 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    height: 50px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -19,9 +21,15 @@
   .rightMenu {
     display: flex;
     align-items: center;
+    font-size: 16px;
+  }
+
+  .rightMenu p {
+    margin-right: 20px;
   }
   
   .logo {
+    margin: 0;
     font-size: 24px;
     font-weight: bold;
     color: #333;
@@ -76,6 +84,7 @@
   }
   
   .Toastify__toast {
+    width: 600px;
     font-size: 16px;
     border-radius: 50px;
     padding: 16px 28px;

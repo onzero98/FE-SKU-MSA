@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+  box-sizing: border-box;
+  background-color: white;
+  height: 100vh;
+  padding-top: 50px;
+  grid-template-columns: 1.2fr 1.5fr 0.8fr 500fr;
+  grid-template-rows: 1fr 1fr;
+  border: 1px solid #eff2f5;
+  grid-template-areas:
+    "searchBar companyChart companyChart portfolios"
+    "searchBar tradeLogs    tradeSection tradeSection";
+}
+
+.searchBar {
+  grid-area: searchBar;
+  
+}
+
+.companyChart {
+  grid-area: companyChart;
+  border: 1px solid #eff2f5;
+}
+
+.portfolios {
+  grid-area: portfolios;
+  border: 1px solid #eff2f5;
+}
+
+
+.tradeSection {
+  grid-area: tradeSection;
+  border: 1px solid #eff2f5;
+}
+
+.tradeLogs {
+  grid-area: tradeLogs;
+  border: 1px solid #eff2f5;
+}

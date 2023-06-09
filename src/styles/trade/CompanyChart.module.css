@@ -1,0 +1,25 @@
+.container {
+  padding: 10px 15px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.titleCode {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.smallString {
+  font-size: 24px;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}

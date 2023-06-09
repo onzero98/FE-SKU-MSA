@@ -1,62 +1,79 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f6f6f6;
-  }
-  
-  h2 {
-    margin-bottom: 50px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
- /* ... 기존 코드 ... */
+  position: absolute;
+  top: 50%;
+  left: 72%; /* 가로 위치 변경 */
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 로그인 버튼 오른쪽에 붙이기 */
+  gap: 1rem;
+}
 
-.input,
-.loginButton,
-.signupButton {
-  box-sizing: border-box; /* 추가 */
-  width: 400px; /* max-width를 width로 변경 */
-  padding: 0.5rem;
+.loginContainer {
+  background-color: #fff;
+  padding: 40px;
   border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  height: 420px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .input {
-  border: 1px solid #ddd;
+  border: none;
+  border-bottom: 1px solid #ccc;
   outline: none;
-  background-color: #fff;
+  background-color: transparent;
   transition: border-color 0.3s;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.input:hover {
+  border-bottom: 1px solid #808080;
 }
 
 .input:focus {
-  border-color: #333;
+  border-bottom-color: #0066ff;
 }
 
 .loginButton {
-  cursor: pointer;
-  background-color: #333;
-  color: #fff;
+  margin-top: 50px;
+  background-color: #0066ff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
+  cursor: pointer;
+  outline: none;
 }
 
-.signupButton {
-  background-color: #ccc;
+.arrowCircle {
+  padding: 10px;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.navLinkButton {
+  width: px;
+  background-color: transparent;
   color: #333;
   border: none;
-  margin-bottom: 250px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .Toastify__toast {
